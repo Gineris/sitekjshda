@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+:root{
+    --corPrimaria-1: #EBB548;
+    --corPrimaria-2: #EC5C14;
+    --corPrimaria-3: #235789;
+    --corPrimaria-4: #565254;
+    --corPrimaria-5: #FFFBFE;
+    --fonte-primaria: 'Belleza', 'calibri';
+}
+
+.BarraNav{
+    background-color: #FFF;
+    padding:15px 35px 15px 15px;
+    display: flex;
+    justify-content: space-between ;
+}
+.BarraNav img{
+    width: 210px;
+    margin-top: -10px;
+}
+
+.BarraNav a{
+    text-decoration: none ;
+    color: #EC5C14;
+    font: 400 1.1rem "M PLUS 1p", sans-serif ;
+}
+
+.perfil ion-icon{
+    font-size: 2em;
+    border: solid 3px var(--corPrimaria-2);
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+    color: #0F3D60;
+} 
+
+/* main{
+    height: 100vh;
+} */
+
+nav.menuLateral{
+    width: 50px;
+    height: 412px;
+    background-color: #04074B;
+    padding: 30px 0 40px 1%;
+    box-shadow: 3px 0 0 #ED5C15;
+    border-radius: 0 20px 20px 0;
+
+    position: fixed;
+    top: 15%;
+    left: 0;
+    overflow: hidden; 
+    transition: .3s;
+}
+nav.menuLateral.expandir{
+    width: 300px;
+}
+.IconExpandir{
+    width: 100%;
+    padding-left: 7px;
+}
+.IconExpandir > ion-icon{
+    color: #ED5C15;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+    padding-left: 3%;
+}
+
+ul li.itemMenu a:hover{
+    background: #ED5C15;
+    color: #FFF;
+}
+
+ul li.itemMenu a{
+    color: #ED5C15;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 1%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 30px;
+    transition: .4s;
+}
+ul li.ativo a{
+    background-color: #ED5C15;
+    color: #FFF;
+    border-radius: 9px 0px 0px 9px;
+}
+
+ul li.itemMenu a .txtLink{
+    margin-left: 70px;
+    transition: .6s;
+    opacity: 0;
+}
+nav.menuLateral.expandir .txtLink{
+    margin-left: 40px;
+    opacity: 1;
+}
+ul li.itemMenu a .icon > ion-icon{
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+
+footer{
+    background-color: #FFF;
+    padding: 10px;
+    font: .7rem "Poppins", sans-serif;
+    color: #666666;
+}
+footer p{
+    padding: 0px 10px 0px 10px;
+    .search-container {
+        display: flex;
+        align-items: center;
+        margin: 20px 100px;
+        gap: 10px;
+    }
+    
+    .search-container input[type="text"] {
+        width: 400px;
+        padding: 12px 20px;
+        border-radius: 30px;
+        border: 2px solid #ff6a00;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+        background-color: #fff;
+    }
+    
+    .search-container input[type="text"]::placeholder {
+        color: #ff6a00;
+    }
+    
+    .search-container button {
+        background-color: #0b0b5a;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-transform: uppercase;
+    }
+    
+    .search-container button:hover {
+        background-color: #060638;
+    }
+    
+    .category-button {
+        background-color: transparent;
+        color: #0b0b5a;
+        border: 2px solid #ff6a00;
+        border-radius: 30px;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+    }
+    
+    .category-button:hover {
+        background-color: #ff6a00;
+        color: white;
+    }
+    
+    /* Form styling */
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 100px;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    form label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+    }
+    
+    form select,
+    form input[type="text"] {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #fff;
+        color: #333;
+        transition: border-color 0.3s ease;
+    }
+    
+    form select:focus,
+    form input[type="text"]:focus {
+        border-color: #ff6a00;
+        outline: none;
+    }
+    
+    form input[type="submit"] {
+        background-color: #0b0b5a;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    form input[type="submit"]:hover {
+        background-color: #060638;
+    }
+    
+    /* List item styling */
+    .list-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        margin: 10px 0;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .list-item img {
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 3px solid #0b0b5a;
+    }
+    
+    .list-item .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .list-item .details {
+        font-size: 14px;
+        color: #777;
+    }
+    
+    .list-item .stars {
+        margin-left: auto;
+        font-size: 16px;
+        color: #ff6a00;
+    }
+    
+}
+footer{
+    background-color: #FFF;
+    padding: 10px;
+    font: .7rem "Poppins", sans-serif;
+    color: #666666;
+}
+footer p{
+    padding: 0px 10px 0px 10px;
+}
